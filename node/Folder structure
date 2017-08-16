@@ -1,0 +1,18 @@
+Folder structure:-
+
+controllers //contain api routes and their functions
+
+	abc.controller.js
+services    //funtions for db queries, computation or third party api calls
+
+	abc.service.js
+static      //contain files/images etc to serve the application
+
+	uploaded-files
+	static-files
+config      //application config or credentials or api keys
+
+	config.js
+	db.js
+
+server.js   //startup file
