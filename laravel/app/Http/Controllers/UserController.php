@@ -16,8 +16,7 @@ class UserController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public
-            function create() {
+    public function create() {
         return view('create');
     }
 
@@ -27,8 +26,7 @@ class UserController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public
-            function store(UserCreateRequest $request) {
+    public function store(UserCreateRequest $request) {
         try {
             if (User::create([
                         'name'     => $request->input('name'),
@@ -56,8 +54,7 @@ class UserController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public
-            function edit($id) {
+    public function edit($id) {
         $user = User::find($id);
         return view('edit', compact('user', 'id'));
     }
@@ -69,9 +66,7 @@ class UserController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public
-            function update(UserUpdateRequest $request, $id) {
-
+    public function update(UserUpdateRequest $request, $id) {
         try {
             $user        = User::find($id);
             $user->name  = $request->input('name');
@@ -98,10 +93,7 @@ class UserController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public
-            function destroy($id) {
-
-
+    public function destroy($id) {
         try {
             $user = User::find($id);
 

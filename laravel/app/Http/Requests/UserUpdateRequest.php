@@ -14,8 +14,7 @@ class UserUpdateRequest extends FormRequest {
      *
      * @return bool
      */
-    public
-            function authorize() {
+    public function authorize() {
         return true;
     }
 
@@ -24,8 +23,7 @@ class UserUpdateRequest extends FormRequest {
      *
      * @return array
      */
-    public
-            function rules(Request $request) {
+    public function rules(Request $request) {
         return [
             'name'  => 'required',
             'email' => 'required|email|unique:users,email, ' . $request->id . ',id',

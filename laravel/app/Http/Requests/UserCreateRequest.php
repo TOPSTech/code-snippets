@@ -14,8 +14,7 @@ class UserCreateRequest extends FormRequest {
      *
      * @return bool
      */
-    public
-            function authorize() {
+    public function authorize() {
         return true;
     }
 
@@ -24,8 +23,7 @@ class UserCreateRequest extends FormRequest {
      *
      * @return array
      */
-    public
-            function rules() {
+    public function rules() {
         return [
             'name'                  => 'required',
             'email'                 => 'required|email|unique:users',
