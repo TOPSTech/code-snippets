@@ -28,9 +28,9 @@ app.use(express.static('../app'));
 app.use(express.static('static/'));
 
 const options = {
-  key: fs.readFileSync('etc/ssl/bombyxplm.com.key','ascii'),
-  cert: fs.readFileSync('etc/ssl/bombyxplm.com.crt','ascii'),
-  ca: fs.readFileSync('etc/ssl/bombyxplm.com.ca-bundle','ascii')
+  key: fs.readFileSync('etc/ssl/test.com.key','ascii'),
+  cert: fs.readFileSync('etc/ssl/test.com.crt','ascii'),
+  ca: fs.readFileSync('etc/ssl/test.com.ca-bundle','ascii')
 };
 
 const seesionMiddleware = session({
