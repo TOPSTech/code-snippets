@@ -10,6 +10,7 @@ function validate(req, res, required){
 	for(var key in required){		
 		if(key == 'email'){
 			var isEmpty = req.check(key, key+' must not be empty').notEmpty();
+			// console.log("isEmpty",isEmpty.validationErrors[0]);
 			if(!isEmpty.validationErrors[0]){
 				req.assert('email', ' Valid email required').isEmail();
 			}
